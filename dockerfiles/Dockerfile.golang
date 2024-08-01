@@ -1,0 +1,7 @@
+FROM golang:1.22.5-alpine3.20 as base
+
+WORKDIR /srv
+
+COPY golang/go.mod golang/go.sum ./
+
+RUN go mod download

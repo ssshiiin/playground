@@ -1,0 +1,28 @@
+version: "3"
+services:
+  php:
+    container_name: php
+    build:
+      dockerfile: dockerfiles/Dockerfile.php
+      target: base
+    volumes:
+      - ./php:/srv/
+    tty: true
+
+  golang:
+    container_name: golang
+    build:
+      dockerfile: dockerfiles/Dockerfile.golang
+      target: base
+    volumes:
+      - ./golang:/srv/
+    tty: true
+
+  node:
+    container_name: node
+    build:
+      dockerfile: dockerfiles/Dockerfile.node
+      target: base
+    volumes:
+      - ./node:/srv/
+    tty: true
