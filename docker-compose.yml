@@ -16,6 +16,8 @@ services:
       target: base
     volumes:
       - ./golang:/srv/
+    ports:
+      - "18888:18888"
     tty: true
 
   node:
