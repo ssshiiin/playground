@@ -11,5 +11,5 @@ docker/up:
 docker/down:
 	$(DOCKER_COMPOSE_CMD) down
 
-docker/%/ssh:
-	$(DOCKER_COMPOSE_CMD) exec ${@:docker/%/ssh=%} sh
+docker/ssh/%:
+	$(DOCKER_COMPOSE_CMD) exec ${@:docker/ssh/%=%} sh
